@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path,include
 from .views import *
-
+app_name='blog'
 urlpatterns = [
-    path('',view1),
-    path('blog_home',blog_home),
-    path('blog_single',blog_single)
+    
+    path('',blog_home,name='blog_home'),
+    path('single',blog_single,name='blog_single')
 ]
