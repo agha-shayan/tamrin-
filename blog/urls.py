@@ -5,5 +5,9 @@ app_name='blog'
 urlpatterns = [
     
     path('',blog_home,name='blog_home'),
-    path('single',blog_single,name='blog_single')
+    path('blog_single',blog_single,name='blog_single'),
+    #path('<int:age>',blog_home),
+   # path('<str:name>',blog_single),
+    path('blog/<int:pk>',detail),
+    
 ]
