@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from blog.models import post
 from django.utils import timezone
-
+#
 # Create your views here.
 def view1(request):
     return render(request,'index.html')
