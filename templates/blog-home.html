@@ -151,7 +151,7 @@
 							<div class="feature-img">
 								<img class="img-fluid" src="{% static 'img/blog/feature-img1.jpg' %}" alt="">
 							</div>
-							<a class="posts-title" href="single">
+							<a class="posts-title" href="blog/{{ i.pk }}">
 								
 								<h3>{{i.title}}</h3>
 							</a>
@@ -223,7 +223,7 @@
 										<img class="img-fluid" src="{% static 'img/blog/pp1.jpg' %}" alt="">
 									</div>
 									<div class="details">
-										<a href="blog-single.html">
+										<a href="blog/{{ i.pk }}"">
 											<h6>Space The Final Frontier</h6>
 										</a>
 										<p>02 Hours ago</p>

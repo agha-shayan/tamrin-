@@ -14,9 +14,5 @@ class post(models.Model):
         db_table_comment = "Question answers"
         verbose_name='پست'
         verbose_name_plural='پست ها'
-  
-
-        
-
     def __str__(self):
-        return "{}---{}".format(self.title,self.id) 
+        return "{}-id={}".format(self.title,self.id) 
