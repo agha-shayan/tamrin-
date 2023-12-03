@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from blog.models import post
 from django.utils import timezone
@@ -25,8 +25,7 @@ def blog_single(request):
 
 def detail(request, pk):
     current_time = timezone.now()
-    posts1 = post.objects.get(
-        published_date__lte=current_time, status=1, id=pk)
+    posts1 =get_object_or_404(post,published_date__lte=current_time, status=1, id=pk)
     posts1.counted_view += 1
     posts1.save()
     context = {'postss': posts1}
